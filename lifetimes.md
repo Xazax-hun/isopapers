@@ -1,5 +1,5 @@
 ---
-title: "A Survey of Static Methods to Prevent Temporal Memory Errors (or A Comparison of Lifetime Annotation Approaches in C++)"
+title: "A Comparison of Lifetime Annotation Approaches in C++"
 document: TODO
 date: 2023-02-24
 audience: EWG, SG23
@@ -44,6 +44,16 @@ temporal memory errors at compilation time. Is it possible to achieve something 
 or mitigate temporal memory errors. The goal is to provide an objective comparison and evaluate their compatibility with the language features that exist in C++
 today.
 
+- Introduction (temporal memory errors, summarizing goal, comparing P1179 and Crubit)
+- Basic examples, emphasis on differences between generic lifetime parameters vs contract-style lifetime annotations
+  - Basic example annotating a function, similar to what we discussed in the emails
+  - Basic example annotating a data structure like string_view
+- Aliasing, borrow rule, iterator invalidation, iterator pairs, move semantics vs self-referential objects (e.g. small-string optimization)
+- Variance in Crubit/Rust approach, lifetimes in higher order functions, solving the same problem using contracts
+- Inheritance, polymorphism and lifetimes
+- Move semantics and lifetimes
+- Template metaprogramming and lifetimes
+- Quality of life: Eliding annotations, inferring annotations in Crubit, non-lexical lifetimes in Rust
 
 ---
 references:
