@@ -1,5 +1,5 @@
 ---
-title: "A Survey of Static Methods to Prevent Temporal Memory Errors"
+title: "A Survey of Static Methods to Prevent Temporal Memory Errors (or A Comparison of Lifetime Annotation Approaches in C++)"
 document: TODO
 date: 2023-02-24
 audience: EWG, SG23
@@ -11,6 +11,19 @@ toc-depth: 4
 ---
 
 \pagebreak
+
+
+
+# Abstract
+
+Recently there has been a renewed interest in improving C++'s safety,
+especially as it relates to memory safety guarantees. One of the predominant
+ideas for improving memory safety involves code annotations and a set of rules
+that allow static analysis to predictably identify problems. The two most mature
+proposals advocating for this approach are Herb Sutter's lifetime profile, and
+Crubit's Rust-inspired lifetime annotations model. This paper attempts an
+unbiased comparison between these approaches to help further this important
+discussion.
 
 # Revision History
 
